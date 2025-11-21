@@ -1,0 +1,274 @@
+/* static/expenses/styles.css - improved UI */
+:root {
+    --bg: #f5f7fa;          /* soft clean background */
+    --card-bg: #ffffff;     /* white cards */
+    --text: #111;           /* dark text */
+    --text-muted: #777;
+    --accent: #3b82f6;      /* blue */
+    --border: #e5e7eb;
+}
+
+body.dark {
+    --bg: #0f172a;              
+    --card-bg: #1e293b;          
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --accent: #60a5fa;
+    --border: #334155;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Navbar */
+.navbar{
+  background:var(--card) !important;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  box-shadow: none;
+}
+.navbar .container{
+  max-width:1100px;
+}
+.navbar-brand{
+  font-weight:700;
+  font-size:1.25rem;
+  color: #0b1220 !important;
+}
+
+/* Layout */
+.container {
+  max-width:1100px;
+}
+
+/* Cards & lists */
+.card-exp {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+.total-box {
+  margin-bottom: 1.25rem;
+  font-weight:700;
+  font-size:1.1rem;
+}
+.chart-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  height: 420px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Buttons & inputs */
+.btn-filter { margin-left: 0.45rem; }
+.btn-primary { background: var(--accent); border-color: var(--accent); }
+.btn-link { color: var(--accent); text-decoration:none; }
+.btn-link.text-danger { color: var(--danger); }
+.form-control { min-width: 160px; border-radius:8px; }
+
+/* Forms */
+form .form-control { padding: 8px 10px; }
+h3 { font-weight:700; margin-bottom:1rem; }
+
+/* Responsive */
+@media (max-width: 920px) {
+  .row > .col-md-4, .row > .col-md-8 {
+    width:100%;
+    display:block;
+  }
+  .chart-card { height: 320px; margin-top: 12px; }
+  .form-control { min-width:120px; }
+}
+
+/* small utilities */
+.text-muted { color: var(--muted); font-size:0.95rem; }
+.small { font-size:0.92rem; color:var(--muted); }
+
+/* static/expenses/styles.css - improved UI + dark mode support (full file) */
+:root{
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --shadow: 0 8px 24px rgba(15,23,42,0.06);
+  --radius: 12px;
+  --text: #0f172a;
+}
+
+/* dark variables */
+body.dark {
+  --bg: #0b1220;
+  --card: #071024;
+  --muted: #94a3b8;
+  --accent: #60a5fa;
+  --danger: #fb7185;
+  --shadow: 0 8px 24px rgba(2,6,23,0.6);
+  --text: #e6eef8;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Navbar */
+.navbar{
+  background:var(--card) !important;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  box-shadow: none;
+}
+.navbar .container{
+  max-width:1100px;
+}
+.navbar-brand{
+  font-weight:700;
+  font-size:1.25rem;
+  color: var(--text) !important;
+}
+.navbar .nav-link { color: var(--muted) !important; }
+
+/* Layout */
+.container { max-width:1100px; padding-top:18px }
+
+/* Cards & lists */
+.card-exp {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+.total-box {
+  margin-bottom: 1.25rem;
+  font-weight:700;
+  font-size:1.1rem;
+}
+.chart-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  height: 420px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Buttons & inputs */
+.btn-filter { margin-left: 0.45rem; }
+.btn-primary { background: var(--accent); border-color: var(--accent); }
+.btn-link { color: var(--accent); text-decoration:none; }
+.btn-link.text-danger { color: var(--danger); }
+.form-control { min-width: 160px; border-radius:8px; }
+
+/* Forms */
+form .form-control { padding: 8px 10px; }
+h3 { font-weight:700; margin-bottom:1rem; }
+.small { font-size:0.92rem; color:var(--muted); }
+
+/* Dark-mode toggle styles */
+.dark-toggle {
+  display:flex; align-items:center; gap:8px;
+  margin-left:8px;
+  font-size:0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .row > .col-md-4, .row > .col-md-8 { width:100%; display:block; }
+  .chart-card { height: 320px; margin-top: 12px; }
+  .form-control { min-width:120px; }
+}
+
+/* small utilities */
+.text-muted { color: var(--muted); font-size:0.95rem; }
+
+.auth-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 35px;
+    border-radius: 14px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+}
+
+.auth-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.auth-form .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.auth-form input {
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 18px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text);
+}
+
+.auth-footer {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.error {
+    color: #dc2626;
+    font-size: 12px;
+}
+/* slight spacing improvement for add/edit form on large screens */
+.card-exp .form-control { padding:10px 12px; font-size:15px; }
+.card-exp .form-label { font-weight:600; color:var(--text); }
+
+
+

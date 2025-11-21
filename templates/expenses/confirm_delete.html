@@ -1,0 +1,11 @@
+{% extends "expenses/base.html" %}
+{% block content %}
+<div style="max-width:720px">
+  <h3>Confirm delete</h3>
+  <p>Are you sure you want to delete "<strong>{{ expense.description }}</strong>"?</p>
+  <form method="post">{% csrf_token %}
+    <button class="btn btn-danger" type="submit">Delete</button>
+    <a class="btn btn-secondary" href="{% url 'expenses:dashboard' %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

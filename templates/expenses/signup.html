@@ -1,0 +1,31 @@
+{% extends "expenses/base.html" %}
+{% block content %}
+
+<div class="auth-container">
+  <div class="auth-card">
+    <h2 class="auth-title">Create Account</h2>
+    <p class="auth-subtitle">Join Expense Tracker today</p>
+
+    <form method="post" class="auth-form">
+      {% csrf_token %}
+
+      {% for field in form %}
+      <div class="form-group">
+        <label>{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+        <small class="error">{{ field.errors|striptags }}</small>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    </form>
+
+    <p class="auth-footer">
+      Already have an account? <a href="/login/">Log In</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}
